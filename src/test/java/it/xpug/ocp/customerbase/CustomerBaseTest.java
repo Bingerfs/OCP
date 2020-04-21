@@ -26,7 +26,7 @@ public class CustomerBaseTest {
 
 	@Test
 	public void findByLastName() throws Exception {
-		List<Customer> found = customerBase.findByLastName("Rossi");
+		List<Customer> found = customerBase.findBy(new Customer("", "Rossi", 0), "lastName");
 		assertThat(found, is(asList(alice, bob)));
 	}
 
